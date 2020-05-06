@@ -1,4 +1,4 @@
-//Kruskal's Algorithm for Minimum Spanning Trees using disjoint sets.
+//Kruskal's Algorithm for Minimum Spanning Trees using disjoint set.
 #include <bits/stdc++.h>
 using namespace std;
 
