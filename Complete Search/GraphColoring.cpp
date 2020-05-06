@@ -33,7 +33,7 @@ string color_names[14]= {"red", "green", "blue", "yellow", "orange", "violet",
                 "magenta", "white", "black", "pink", "brown", "cyan", 
                 "grey", "purple"};
 
-cin>>N>>E>>M; //reading Number of Nodes, Edges and colors
+cin>>N>>E>>M; //reading number of Nodes, Edges and colors
 
 adjlist.assign(N+1, vector<int>());
 color.assign(N+1, -1); //initialize nodes' color
