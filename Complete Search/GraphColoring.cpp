@@ -2,12 +2,11 @@
 #include <iostream>
 #include <vector>
 #include <string>
-
 using namespace std;
 
 vector< vector<int> > adjlist;
 vector<int> color;
-int N, E, M=3; //Number of Nodes, Edges and Colors
+int N, E, M; //Number of Nodes, Edges and Colors
 
 bool isok (int x, int c) { 
      for(auto y: adjlist[x]) //if any adjacent node has this color assigned then this color isn't available
@@ -34,7 +33,7 @@ string color_names[14]= {"red", "green", "blue", "yellow", "orange", "violet",
                 "magenta", "white", "black", "pink", "brown", "cyan", 
                 "grey", "purple"};
 
-cin>>N>>E; //reading Number of Nodes and Edges
+cin>>N>>E>>M; //reading Number of Nodes, Edges and colors
 
 adjlist.assign(N+1, vector<int>());
 color.assign(N+1, -1); //initialize nodes' color
@@ -56,18 +55,3 @@ cout<<"\nNode\tColor\n";
 
 	return 0; 
 } 
-
-/* Coloring the following undirected graph with 3 Colors
-    (3)---(2) 
-     |   / | 
-     |  /  | 
-     | /   | 
-    (0)---(1) 
-
-Sample Input:
-4 5 ( 4 Vertices, 5 Edges )
-0 1 ( Edge a <-> b )
-0 2
-0 3
-1 2
-3 2 */
