@@ -1,4 +1,5 @@
-//Dijkstra implementation for shortest paths.
+//Dijkstra implementation for shortest paths
+//using priority queue
 #include <iostream>
 #include <vector>
 #include <queue>
