@@ -1,2 +1,2 @@
 # Shortest Paths
-My implementations for finding Single Source Shortest Paths and All Pairs Shortest Paths in graphs.
+My implementations for shortest path finding algorithms in graphs.
