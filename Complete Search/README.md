@@ -1,2 +1,2 @@
 # Complete Search
-Complete Search algorithms using Bruteforce and Backtracking techniques.
+Complete Search implementations using Bruteforce and Backtracking techniques.
