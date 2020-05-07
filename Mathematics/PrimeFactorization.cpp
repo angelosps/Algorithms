@@ -1,3 +1,4 @@
+//Calculating the prime factorization of a number.
 #include <iostream>
 #include <vector>
 
