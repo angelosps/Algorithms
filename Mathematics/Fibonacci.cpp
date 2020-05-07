@@ -1,3 +1,4 @@
+//Fibonacci Sequence. 
 #include <iostream>
 #define N 20 //Calculating the first 20 numbers of Fibonacci Sequence. Adjust for more.
 using namespace std;
