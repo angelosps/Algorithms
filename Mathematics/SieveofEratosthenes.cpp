@@ -1,3 +1,4 @@
+//Sieve of Eratosthenes algorithm implementation
 #include <iostream>
 #define N 100
 using namespace std;
