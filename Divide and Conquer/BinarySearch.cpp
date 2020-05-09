@@ -21,11 +21,13 @@ int main(void){
     int arr[N];
 
     for(int i=0; i<N; i++) cin>>arr[i];
-    cout<<"Input the item you want to search for\n";
     
+    cout<<"Input the item you want to search for\n";
     cin>>x;
+    
     int ans = binary_search(arr, 0, N-1, x);
-    if( ans == NOT_FOUND)
+    
+    if( ans == NOT_FOUND )
         cout<<"Item was not found.\n";
     else 
         cout<<"Item was found at position "<<ans<<endl;
