@@ -6,16 +6,16 @@ using namespace std;
 
 int partition (int arr[], int low, int high) {
 
-    	int mid = (low + high) / 2;     // find the mid position
-	int pivot = arr[mid];           // pivot is the median element 
-	int idx = (low - 1);            // index of the latest smallest item 
-    	int pos = mid;                  // position of the pivot 
+    int mid = (low + high) / 2;     // find the mid position
+    int pivot = arr[mid];           // pivot is the median element 
+    int idx = (low - 1);            // index of the latest smallest item 
+    int pos = mid;                  // position of the pivot 
 
-	for (int i = low; i <= high ; i++) { 
-            if (arr[i] < pivot)         // if item is smaller than pivot
-	    swap(arr[++idx], arr[i]);   // place it after the latest smallest item
+    for (int i = low; i <= high ; i++) { 
+        if (arr[i] < pivot)         // if item is smaller than pivot
+        swap(arr[++idx], arr[i]);   // place it after the latest smallest item
             
-            if(arr[i] == pivot) pos=i;  // update the pivot's position	
+        if(arr[i] == pivot) pos=i;  // update the pivot's position	
     } 
 
     swap(arr[++idx], arr[pos]);     // put the pivot after its last smaller item 
@@ -48,7 +48,7 @@ int main(void){
     cout<<"Sorted array is: \n"; 
 	
     for (int i=0; i<N; i++) 
-		cout<<arr[i]<<" "; 
+	cout<<arr[i]<<" "; 
 	
     cout<<endl;  
 	
