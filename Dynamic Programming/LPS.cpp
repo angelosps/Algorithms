@@ -23,7 +23,7 @@ int main(void){
 string s;
 cin>>s;
 
-cout << "Longest Palindromic Subsequence = " 
+cout << "Longest Palindromic Subsequence length = " 
 << LPS(s, 0, s.size()-1) << endl;
 
     return 0;
