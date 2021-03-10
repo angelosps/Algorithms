@@ -16,7 +16,7 @@ int binary_search(int arr[], int left, int right, int x) {
 
 int main(void) {
     int N, x; 
-    cin>>N;
+    cin >> N;
     int arr[N];
 
     for(int i = 0; i < N; i++) 
@@ -28,7 +28,7 @@ int main(void) {
     int ans = binary_search(arr, 0, N-1, x);
     
     (ans == NOT_FOUND) ? cout << "Item was not found.\n" : 
-    cout<<"Item was found at position " << ans << endl;
+    cout << "Item was found at position " << ans << endl;
 
     return 0;
 }
