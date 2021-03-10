@@ -37,14 +37,14 @@ int main(void){
     
     int arr[N];
     
-    for(int i=0; i<N; i++) 
+    for(int i = 0; i < N; i++) 
         cin >> arr[i];
 
     quicksort(arr, 0, N - 1); 
 	
     cout << "Sorted array is: \n"; 
 	
-    for (int i=0; i<N; i++) 
+    for (int i = 0; i < N; i++) 
 	    cout << arr[i] << " "; 
 	
     cout << endl;  
