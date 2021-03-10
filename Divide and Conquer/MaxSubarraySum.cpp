@@ -8,7 +8,7 @@
 using namespace std;
 
 int max_crossing_sum(int arr[], int left, int mid, int right) {
-    int sum=0;
+    int sum = 0;
     int leftsum = -INF;
 
     // finding the max sum in left
@@ -36,9 +36,10 @@ int MSS(int arr[], int left, int right) {
 int main(void) {
     int N; 
     cin >> N;
+    
     int arr[N];
-
-    for(int i = 0; i < N; i++) cin >> arr[i];
+    for(int i = 0; i < N; i++) 
+        cin >> arr[i];
 
     cout << "Maximum Subarray Sum is: " << MSS(arr, 0, N-1) << endl;
     return 0;
