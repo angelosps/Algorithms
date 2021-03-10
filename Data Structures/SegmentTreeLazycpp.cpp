@@ -1,6 +1,9 @@
-//Segment Tree implementation using Lazy Propagation.
+// Segment Tree with Lazy Propagation
+
 #include <bits/stdc++.h>
+
 #define INF 10000000
+
 using namespace std;
 
 struct tree{
@@ -12,16 +15,16 @@ int arr[100000];
 tree seg[400000];
 
 void build(int s, int e, int idx){
-if(s==e){
-    seg[idx].value=arr[s];
-    seg[idx].lazy=0;
-    return;
-}
+    if(s==e){
+        seg[idx].value=arr[s];
+        seg[idx].lazy=0;
+        return;
+    }
 
-int mid=(s+e)/2;
-build(s, mid, idx*2);
-build(mid+1, e, idx*2+1);
-seg[idx].value=min(seg[idx*2].value, seg[idx*2+1].value);
+    int mid=(s+e)/2;
+    build(s, mid, idx*2);
+    build(mid+1, e, idx*2+1);
+    seg[idx].value=min(seg[idx*2].value, seg[idx*2+1].value);
 }
 
 void update(int s, int e, int us, int ue, int k, int idx){
@@ -65,22 +68,22 @@ int query(int s, int e, int qs, int qe, int idx){
 
 int main( void ) {
 
-int n; cin>>n;
+    int n; cin>>n;
 
-for(int i=0; i<n; i++) cin>>arr[i];
+    for(int i=0; i<n; i++) cin>>arr[i];
 
-build(0, n-1, 1);
+    build(0, n-1, 1);
 
-printf("Input range you want to find the smallest element within\n");
-int l, r, k; scanf("%d %d", &l, &r);
+    printf("Input range you want to find the smallest element within\n");
+    int l, r, k; scanf("%d %d", &l, &r);
 
-printf("Smallest item in range [%d, %d] is: %d\n", l, r, query(0, n-1, l-1, r-1, 1));
+    printf("Smallest item in range [%d, %d] is: %d\n", l, r, query(0, n-1, l-1, r-1, 1));
 
-printf("Input the integer to be added in the given range\n"); scanf("%d", &k);
+    printf("Input the integer to be added in the given range\n"); scanf("%d", &k);
 
-update(0, n-1, l-1, r-1, k, 1);
+    update(0, n-1, l-1, r-1, k, 1);
 
-printf("Smallest item in the same updated range [%d, %d] is: %d\n", l, r, query(0, n-1, l-1, r-1, 1));
+    printf("Smallest item in the same updated range [%d, %d] is: %d\n", l, r, query(0, n-1, l-1, r-1, 1));
 
     return 0;
 }
