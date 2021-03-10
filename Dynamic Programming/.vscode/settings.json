@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "set": "cpp",
+        "__tree": "cpp",
+        "iostream": "cpp",
+        "cstdio": "cpp"
+    }
+}
