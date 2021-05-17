@@ -1,28 +1,26 @@
-// N Queens - Backtracking
+// N Queens using bitmasks
 
 #include <iostream>
-
-#define N 4
-
+#include <cstdlib>
+#include <cstdio>
+#include <cstring>
 using namespace std;
 
-bool column[N], diag1[2*N-1], diag2[2*N-1];
-int cnt;
+const int N = 14;
+int ans, OK = (1 << N) - 1;
 
-void process(int y) {
-    if(y == N) { cnt++; return; } 
-    for(int x = 0; x < N; x++) {
-        if(column[x] || diag1[x+y] || diag2[x-y+N-1]) 
-            continue;
-        column[x] = diag1[x+y] = diag2[x-y+N-1] = 1; 
-        process(y+1);
-        column[x] = diag1[x+y] = diag2[x-y+N-1] = 0; 
+void backtrack(int rw, int ld, int rd) {
+    if (rw == OK) { ans++; return; }    
+    int pos = OK & (~(rw | ld | rd));   
+    while (pos) {
+        int p = pos & -pos;
+        pos -= p;
+        backtrack(rw | p, (ld | p) << 1, (rd | p) >> 1);
     }
 }
 
 int main() {
-    process(0);
-    cout << cnt << endl;
-    
+    backtrack(0, 0, 0);
+    printf("%d\n", ans);
     return 0;
 }
