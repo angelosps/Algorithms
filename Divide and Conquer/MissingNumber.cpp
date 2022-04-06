@@ -1,6 +1,6 @@
 // Missing number in an arithmetic progression
 // Divide and Conquer approach in O(logn)
-// i.e in arithmetic progression [1, 2, 4, 8, 10] 
+// i.e in arithmetic progression [0, 2, 4, 8, 10] 
 // the missing number is 6
 
 
